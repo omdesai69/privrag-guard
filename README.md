@@ -95,3 +95,8 @@ cd privrag-guard
 pip install -e ".[dev]"
 pytest
 ```
+
+
+### Privacy Budget Management
+- Built-in PrivacyBudgetTracker for query limits.
+- Cosine similarity ranking preservation benchmarks.
