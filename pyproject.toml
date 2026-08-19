@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "privrag-guard"
+version = "0.1.0"
+description = "Privacy-preserving middleware for embedding pipelines and vector search."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "PrivRAG-Guard contributors"}]
+dependencies = ["numpy>=1.24"]
+
+[project.scripts]
+privrag = "privrag.cli:main"
+
+[project.optional-dependencies]
+chroma = ["chromadb>=0.5"]
+faiss = ["faiss-cpu>=1.8"]
+qdrant = ["qdrant-client>=1.9"]
+langchain = ["langchain-core>=0.2"]
+dev = ["pytest>=8.0"]
+all = ["chromadb>=0.5", "faiss-cpu>=1.8", "qdrant-client>=1.9", "langchain-core>=0.2", "pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.hatch.build.targets.wheel]
+packages = ["privrag"]
