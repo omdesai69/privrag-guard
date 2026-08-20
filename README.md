@@ -1,5 +1,9 @@
 # PrivRAG-Guard
 
+[![PyPI version](https://img.shields.io/pypi/v/privrag-guard.svg?color=blue)](https://pypi.org/project/privrag-guard/)
+[![Python versions](https://img.shields.io/pypi/pyversions/privrag-guard.svg)](https://pypi.org/project/privrag-guard/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 Privacy-preserving middleware that sanitizes vector embeddings before they reach
 a database. Defends RAG pipelines against embedding inversion attacks using
 calibrated differential-privacy noise, semantic subspace projection, and keyed
@@ -8,7 +12,16 @@ orthogonal rotation — while preserving >98% cosine retrieval accuracy.
 ## Install
 
 ```bash
-pip install -e ".[dev]"
+pip install privrag-guard
+```
+
+For specific vector store adapters:
+```bash
+pip install "privrag-guard[chroma]"    # ChromaDB adapter
+pip install "privrag-guard[faiss]"     # FAISS adapter
+pip install "privrag-guard[qdrant]"    # Qdrant adapter
+pip install "privrag-guard[langchain]" # LangChain wrapper
+pip install "privrag-guard[all]"       # All adapters
 ```
 
 ## Library usage
@@ -76,5 +89,8 @@ and in transit.
 ## Development
 
 ```bash
+git clone https://github.com/omdesai69/privrag-guard.git
+cd privrag-guard
+pip install -e ".[dev]"
 pytest
 ```
