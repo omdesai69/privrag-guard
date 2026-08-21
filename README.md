@@ -1,5 +1,6 @@
 # PrivRAG-Guard
 
+[![CI](https://github.com/omdesai69/privrag-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/omdesai69/privrag-guard/actions/workflows/ci.yml)
 [![PyPI version](https://img.shields.io/pypi/v/privrag-guard.svg?color=blue)](https://pypi.org/project/privrag-guard/)
 [![Python versions](https://img.shields.io/pypi/pyversions/privrag-guard.svg)](https://pypi.org/project/privrag-guard/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
