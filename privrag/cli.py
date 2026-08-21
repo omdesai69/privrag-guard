@@ -73,7 +73,8 @@ def cmd_attack(args: argparse.Namespace) -> None:
         ("RAW (unprotected)", result["raw"], _red),
         ("PROTECTED (guarded)", result["protected"], _green),
     ]:
-        print(f"  {_bold(label)}  mean confidence: {color(f'{data["mean_confidence"]:.0%}')}")
+        conf_str = f"{data['mean_confidence']:.0%}"
+        print(f"  {_bold(label)}  mean confidence: {color(conf_str)}")
         for rank, (token, conf) in enumerate(
             zip(data["tokens"], data["confidences"]), 1,
         ):
