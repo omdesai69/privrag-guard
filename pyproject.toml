@@ -9,7 +9,7 @@ description = "Privacy-preserving middleware for embedding pipelines and vector 
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-authors = [{name = "PrivRAG-Guard contributors"}]
+authors = [{name = "Om Desai"}]
 dependencies = ["numpy>=1.24"]
 classifiers = [
     "Programming Language :: Python :: 3",
